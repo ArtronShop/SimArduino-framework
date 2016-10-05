@@ -1,13 +1,3 @@
-extern "C" {
-	#include <stdio.h>
-	#include "freertos/FreeRTOS.h"
-	#include "freertos/task.h"
-	#include "rom/ets_sys.h"
-	#include "esp_system.h"
-	#include "nvs_flash.h"
-	#include "driver/gpio.h"
-	#include "sdkconfig.h"
-}
 #include "Core.h"
 
 extern void loop() ;

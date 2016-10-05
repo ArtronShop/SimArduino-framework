@@ -38,11 +38,19 @@ int digitalRead(int pin) {
 	return gpio_get_level(static_cast<gpio_num_t>(pin));
 }
 
-void delay(long ms) {
+void delay(unsigned long ms) {
 	vTaskDelay(ms / portTICK_RATE_MS);
 	// ets_delay_us(ms * 1000);
 }
 
-void delayMicroseconds(long us) {
+void delayMicroseconds(unsigned int us) {
 	ets_delay_us(us);
+}
+
+unsigned long millis() {
+  return system_get_time() / 1000;
+}
+
+unsigned long micros() {
+  return system_get_time();
 }
